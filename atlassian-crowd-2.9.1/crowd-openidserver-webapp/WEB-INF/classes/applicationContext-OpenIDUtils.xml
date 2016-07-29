@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="resetableHiLoGeneratorHelper" class="com.atlassian.hibernate.extras.ResetableHiLoGeneratorHelper">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="xsrfTokenGenerator" class="com.atlassian.crowd.xwork.SimpleXsrfTokenGenerator" />
+
+    <!-- We override the resourceLocator, clientProperties, and crowdSecurityFilter beans from CrowdRestClient. -->
+    <import resource="applicationContext-CrowdRestClient.xml"/>
+
+    <bean id="resourceLocator" class="com.atlassian.crowd.service.client.ClientResourceLocator">
+        <constructor-arg index="0" value="crowd.properties"/>
+        <constructor-arg index="1" value="${crowd.openid.home}"/>
+    </bean>
+
+    <bean id="clientProperties"
+          class="com.atlassian.crowd.openid.server.filter.OpenIDServerClientPropertiesImpl"
+          factory-method="newInstanceFromResourceLocator">
+        <constructor-arg ref="resourceLocator"/>
+    </bean>
+
+    <bean id="urlTemplateFormatter" class="com.atlassian.crowd.openid.server.util.UrlTemplateFormatter" />
+
+    <bean id="openIdAuthenticationUrlProvider" class="com.atlassian.crowd.openid.server.filter.OpenIDServerAuthenticationUrlProvider">
+        <constructor-arg ref="clientProperties"/>
+        <constructor-arg ref="urlTemplateFormatter"/>
+    </bean>
+
+    <bean id="crowdSecurityFilter" class="com.atlassian.crowd.integration.http.filter.CrowdSecurityFilter">
+        <constructor-arg ref="crowdHttpAuthenticator"/>
+        <constructor-arg ref="openIdAuthenticationUrlProvider"/>
+    </bean>
+</beans>

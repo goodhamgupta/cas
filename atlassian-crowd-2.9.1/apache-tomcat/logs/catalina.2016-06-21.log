@@ -1,0 +1,224 @@
+Jun 21, 2016 3:32:37 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Jun 21, 2016 3:32:38 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:32:38 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 661 ms
+Jun 21, 2016 3:32:38 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 21, 2016 3:32:38 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.69
+Jun 21, 2016 3:32:38 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml
+Jun 21, 2016 3:32:42 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:32:45 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml has finished in 7,030 ms
+Jun 21, 2016 3:32:45 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml
+Jun 21, 2016 3:32:48 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:32:49 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml has finished in 4,780 ms
+Jun 21, 2016 3:32:49 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml
+Jun 21, 2016 3:33:02 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:33:04 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml has finished in 14,581 ms
+Jun 21, 2016 3:33:04 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml
+Jun 21, 2016 3:33:11 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:33:16 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml has finished in 12,411 ms
+Jun 21, 2016 3:33:16 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT
+Jun 21, 2016 3:33:17 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:33:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT has finished in 163 ms
+Jun 21, 2016 3:33:17 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:33:17 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 39075 ms
+Jun 21, 2016 3:37:49 PM org.apache.jasper.compiler.TldLocationsCache tldScanJar
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:38:50 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Jun 21, 2016 3:38:50 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:38:50 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jun 21, 2016 3:38:50 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/openidserver] appears to have started a thread named [HSQLDB Timer @5cbf8df9] but has failed to stop it. This is very likely to create a memory leak.
+Jun 21, 2016 3:38:50 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/openidserver] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@285a16a3]) and a value of type [scala.concurrent.forkjoin.ForkJoinPool.Submitter] (value [scala.concurrent.forkjoin.ForkJoinPool$Submitter@427b7b1b]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 21, 2016 3:38:50 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:38:50 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:38:55 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Jun 21, 2016 3:38:55 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:38:55 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 571 ms
+Jun 21, 2016 3:38:55 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 21, 2016 3:38:55 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.69
+Jun 21, 2016 3:38:55 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml
+Jun 21, 2016 3:38:57 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:39:00 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml has finished in 4,781 ms
+Jun 21, 2016 3:39:00 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml
+Jun 21, 2016 3:39:02 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:39:03 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml has finished in 3,656 ms
+Jun 21, 2016 3:39:03 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml
+Jun 21, 2016 3:39:10 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:39:12 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml has finished in 8,797 ms
+Jun 21, 2016 3:39:12 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml
+Jun 21, 2016 3:39:15 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:39:20 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml has finished in 7,355 ms
+Jun 21, 2016 3:39:20 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT
+Jun 21, 2016 3:39:20 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:39:20 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT has finished in 175 ms
+Jun 21, 2016 3:39:20 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:39:20 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 24814 ms
+Jun 21, 2016 3:39:20 PM org.apache.jasper.compiler.TldLocationsCache tldScanJar
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:43:13 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Jun 21, 2016 3:43:13 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:43:14 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jun 21, 2016 3:43:14 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/openidserver] appears to have started a thread named [HSQLDB Timer @35c7cb10] but has failed to stop it. This is very likely to create a memory leak.
+Jun 21, 2016 3:43:14 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/openidserver] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@38ff1242]) and a value of type [scala.concurrent.forkjoin.ForkJoinPool.Submitter] (value [scala.concurrent.forkjoin.ForkJoinPool$Submitter@2e108ae4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 21, 2016 3:43:14 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:43:14 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:43:17 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Jun 21, 2016 3:43:17 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:43:17 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 568 ms
+Jun 21, 2016 3:43:17 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 21, 2016 3:43:17 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.69
+Jun 21, 2016 3:43:17 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml
+Jun 21, 2016 3:43:19 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:43:22 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml has finished in 4,244 ms
+Jun 21, 2016 3:43:22 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml
+Jun 21, 2016 3:43:24 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:43:25 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml has finished in 3,709 ms
+Jun 21, 2016 3:43:25 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml
+Jun 21, 2016 3:43:34 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:43:36 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml has finished in 10,350 ms
+Jun 21, 2016 3:43:36 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml
+Jun 21, 2016 3:43:38 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:43:42 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml has finished in 6,811 ms
+Jun 21, 2016 3:43:42 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT
+Jun 21, 2016 3:43:43 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 3:43:43 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT has finished in 240 ms
+Jun 21, 2016 3:43:43 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 3:43:43 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 25397 ms
+Jun 21, 2016 4:09:42 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Jun 21, 2016 4:09:42 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 4:09:42 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jun 21, 2016 4:09:42 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak.
+Jun 21, 2016 4:09:43 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/openidserver] appears to have started a thread named [HSQLDB Timer @34b93ac2] but has failed to stop it. This is very likely to create a memory leak.
+Jun 21, 2016 4:09:43 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/openidserver] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3ec4a05d]) and a value of type [scala.concurrent.forkjoin.ForkJoinPool.Submitter] (value [scala.concurrent.forkjoin.ForkJoinPool$Submitter@79ef1264]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 21, 2016 4:09:43 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 4:09:43 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 4:17:46 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Jun 21, 2016 4:17:46 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 4:17:46 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 570 ms
+Jun 21, 2016 4:17:46 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 21, 2016 4:17:46 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.69
+Jun 21, 2016 4:17:46 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml
+Jun 21, 2016 4:17:48 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 4:17:51 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml has finished in 4,527 ms
+Jun 21, 2016 4:17:51 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml
+Jun 21, 2016 4:17:53 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 4:17:55 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml has finished in 3,828 ms
+Jun 21, 2016 4:17:55 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml
+Jun 21, 2016 4:18:01 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 4:18:03 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml has finished in 8,674 ms
+Jun 21, 2016 4:18:03 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml
+Jun 21, 2016 4:18:06 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 4:18:10 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml has finished in 6,845 ms
+Jun 21, 2016 4:18:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT
+Jun 21, 2016 4:18:10 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 21, 2016 4:18:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT has finished in 205 ms
+Jun 21, 2016 4:18:10 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8095"]
+Jun 21, 2016 4:18:10 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 24130 ms

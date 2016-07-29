@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+
+    <package name="default" extends="struts-default" strict-method-invocation="true">
+        <result-types>
+            <result-type class="org.apache.struts2.dispatcher.ServletDispatcherResult" name="dispatcher"/>
+            <result-type class="org.apache.struts2.dispatcher.ServletRedirectResult" name="redirect"/>
+            <result-type class="org.apache.struts2.dispatcher.ServletActionRedirectResult" name="redirect-action"/>
+            <result-type class="com.opensymphony.xwork2.ActionChainResult" name="chain"/>
+        </result-types>
+
+        <interceptors>
+            <interceptor name="static-params" class="com.opensymphony.xwork2.interceptor.StaticParametersInterceptor"/>
+            <interceptor name="params" class="com.atlassian.crowd.xwork.interceptors.SafeParametersInterceptor"/>
+            <interceptor name="servlet" class="org.apache.struts2.interceptor.ServletConfigInterceptor"/>
+
+            <interceptor-stack name="defaultStack">
+                <interceptor-ref name="static-params"/>
+                <interceptor-ref name="params"/>
+                <interceptor-ref name="servlet"/>
+            </interceptor-stack>
+
+        </interceptors>
+    </package>
+
+    <!-- Unsecure Console Actions -->
+    <package name="crowd-openid" extends="default" namespace="/" strict-method-invocation="true">
+
+        <action name="login" class="com.atlassian.crowd.openid.client.action.Login" >
+            <result name="input" type="dispatcher">login.jsp</result>
+            <!-- this should point to the path mapping of the the OpenIDClientServlet defined in web.xml -->
+            <result name="openid-authrequest" type="dispatcher">/login.openid</result>
+            <result name="success" type="redirect">/secure</result>
+            <allowed-methods>login,loginResponse</allowed-methods>
+        </action>
+
+        <action name="logoff" class="com.atlassian.crowd.openid.client.action.Logoff" >
+            <result name="success" type="redirect">login.action</result>
+        </action>
+
+        <action name="baseaction" class="com.atlassian.crowd.openid.client.action.BaseAction"/>
+
+    </package>
+
+
+    <!-- Unsecure Console Actions -->
+    <package name="secure" extends="default" namespace="/secure" strict-method-invocation="true">
+
+        <action name="viewprofile" class="com.atlassian.crowd.openid.client.action.secure.ViewProfile" >
+            <result name="success">/secure/viewprofile.jsp</result>
+        </action>
+
+    </package>
+
+</struts>

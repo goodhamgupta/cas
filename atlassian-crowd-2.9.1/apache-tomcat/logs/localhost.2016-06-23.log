@@ -1,0 +1,18 @@
+Jun 23, 2016 12:54:35 PM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+Jun 23, 2016 12:54:35 PM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+Jun 23, 2016 12:54:41 PM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+Jun 23, 2016 12:54:41 PM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+Jun 23, 2016 12:55:49 PM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+Jun 23, 2016 12:55:52 PM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+Jun 23, 2016 12:55:55 PM org.apache.catalina.core.ApplicationContext log
+INFO: Starting spray application ...
+Jun 23, 2016 12:55:56 PM org.apache.catalina.core.ApplicationContext log
+INFO: Automatically setting spray.servlet.root-path to '/openidserver'
+Jun 23, 2016 12:55:56 PM org.apache.catalina.core.ApplicationContext log
+INFO: org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)

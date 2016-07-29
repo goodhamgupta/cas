@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- openid related beans -->
+    <bean id="crowdProvider" class="com.atlassian.crowd.openid.server.provider.OpenID4JavaProvider">
+        <constructor-arg index="0" ref="serverManager"/>
+        <constructor-arg index="1" value="secure/interaction/allowauthentication.action"/>
+        <constructor-arg index="2" ref="openIDAuthenticationManager"/>
+        <constructor-arg index="3" ref="openIDPropertyManager"/>
+        <constructor-arg index="4" ref="crowdHttpAuthenticator"/>
+        <constructor-arg index="5" ref="openIDResponder"/>
+    </bean>
+
+    <bean id="openIDResponder" class="com.atlassian.crowd.openid.server.provider.OpenID4JavaResponder">
+        <constructor-arg ref="serverManager"/>
+    </bean>
+
+    <bean id="serverManager" class="org.openid4java.server.ServerManager">
+        <property name="privateAssociations" ref="privateAssociationsStore"/>
+        <property name="sharedAssociations" ref="sharedAssociationsStore"/>
+        <property name="userSetupUrl" value="/openidserver/"/>
+    </bean>
+
+    <!-- OpenID (and openid4java) requires that association stores for private and shared are separate -->
+    <bean id="privateAssociationsStore" class="com.atlassian.crowd.openid.server.provider.association.CacheBackedAssociationStore">
+        <constructor-arg ref="privateAssociationCache"/>
+    </bean>
+
+    <bean id="sharedAssociationsStore" class="com.atlassian.crowd.openid.server.provider.association.CacheBackedAssociationStore">
+        <constructor-arg ref="sharedAssociationCache"/>
+    </bean>
+
+    <beans profile="!redis">
+        <bean name="privateAssociationCache" class="com.atlassian.crowd.openid.server.provider.association.InMemoryAssociationCache">
+            <constructor-arg value="private"/>
+        </bean>
+        <bean name="sharedAssociationCache" class="com.atlassian.crowd.openid.server.provider.association.InMemoryAssociationCache">
+            <constructor-arg value="shared"/>
+        </bean>
+    </beans>
+
+    <beans profile="redis">
+        <bean name="privateAssociationCache" class="com.atlassian.crowd.openid.server.provider.association.RedisAssociationCache">
+            <constructor-arg value="private"/>
+            <constructor-arg ref="jedisPool"/>
+            <constructor-arg ref="associationStringMapFormat"/>
+        </bean>
+        <bean name="sharedAssociationCache" class="com.atlassian.crowd.openid.server.provider.association.RedisAssociationCache">
+            <constructor-arg value="shared"/>
+            <constructor-arg ref="jedisPool"/>
+            <constructor-arg ref="associationStringMapFormat"/>
+        </bean>
+        <bean name="jedisPool" class="redis.clients.jedis.JedisPool">
+            <constructor-arg index="0">
+                <bean class="redis.clients.jedis.JedisPoolConfig"/> <!-- using the defaults, tune if necessary -->
+            </constructor-arg>
+            <constructor-arg index="1" value="${redis.host}"/>
+            <constructor-arg index="2" value="${redis.port:6379}"/>
+        </bean>
+        <bean name="associationStringMapFormat" class="com.atlassian.crowd.openid.server.provider.association.AssociationStringMapFormat"/>
+    </beans>
+
+</beans>

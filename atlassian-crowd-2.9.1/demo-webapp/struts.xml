@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+
+    <constant name="struts.excludedClasses"
+              value="
+                java.lang.Object,
+                java.lang.Runtime,
+                java.lang.System,
+                java.lang.ClassLoader,
+                java.lang.Shutdown,
+                ognl.OgnlContext,
+                ognl.MemberAccess,
+                ognl.ClassResolver,
+                ognl.TypeConverter,
+                com.opensymphony.xwork2.ActionContext" />
+
+    <package name="default" extends="struts-default">
+        <result-types>
+            <result-type class="org.apache.struts2.dispatcher.ServletDispatcherResult" name="dispatcher"/>
+            <result-type class="org.apache.struts2.dispatcher.ServletRedirectResult" name="redirect"/>
+            <result-type class="org.apache.struts2.dispatcher.ServletActionRedirectResult" name="redirect-action"/>
+        </result-types>
+
+        <interceptors>
+            <interceptor name="static-params" class="com.opensymphony.xwork2.interceptor.StaticParametersInterceptor"/>
+            <interceptor name="params" class="com.atlassian.crowd.xwork.interceptors.SafeParametersInterceptor"/>
+            <interceptor name="servlet" class="org.apache.struts2.interceptor.ServletConfigInterceptor"/>
+
+            <interceptor-stack name="defaultStack">
+                <interceptor-ref name="static-params"/>
+                <interceptor-ref name="params"/>
+                <interceptor-ref name="servlet"/>
+            </interceptor-stack>
+
+        </interceptors>
+    </package>
+
+    <!-- Unsecure Console Actions -->
+    <package name="crowd-default" extends="default" namespace="/console" strict-method-invocation="true">
+
+        <action name="login" class="com.atlassian.crowd.security.demo.action.Login" >
+            <result name="input" type="dispatcher">/login.jsp</result>
+            <result name="success" type="redirect">/secure/console/console.action</result>
+        </action>
+
+        <action name="logoff" class="com.atlassian.crowd.security.demo.action.Logoff" >
+            <result name="success" type="redirect">/console/login.action</result>
+        </action>
+
+        <action name="baseaction" class="com.atlassian.crowd.security.demo.action.BaseAction"/>
+
+    </package>
+
+    <!-- ==================== Console Actions ==================== -->
+    <package name="console" extends="crowd-default" namespace="/secure/console">
+
+        <action name="console" class="com.atlassian.crowd.security.demo.action.Console">
+            <result name="success" type="dispatcher">/secure/index.jsp</result>
+        </action>
+
+    </package>
+
+
+    <!-- ==================== User Actions ==================== -->
+    <package name="user" extends="crowd-default" namespace="/secure/user" strict-method-invocation="true">
+
+        <action name="browseusers" class="com.atlassian.crowd.security.demo.action.user.BrowseUsers">
+            <result name="success">/secure/user/browse_users.jsp</result>
+        </action>
+
+        <action name="viewuser" class="com.atlassian.crowd.security.demo.action.user.ViewUser" method="default">
+            <result name="success">/secure/user/view_user.jsp</result>
+        </action>
+
+        <action name="updateuser" class="com.atlassian.crowd.security.demo.action.user.UpdateUser" method="default">
+            <result name="input">/secure/user/view_user.jsp</result>
+            <result name="success">/secure/user/view_user.jsp</result>
+            <allowed-methods>updateGeneral,addGroup,removeGroup</allowed-methods>
+        </action>
+
+        <action name="removeuser" class="com.atlassian.crowd.security.demo.action.user.RemoveUser" method="default">
+            <result name="input">/secure/user/remove_user.jsp</result>
+            <result name="success" type="redirect-action">
+                <param name="actionName">browseusers</param>
+                <param name="namespace">/secure/user</param>
+            </result>
+            <allowed-methods>update</allowed-methods>
+        </action>
+
+        <action name="adduser" class="com.atlassian.crowd.security.demo.action.user.AddUser" method="default">
+            <result name="input">/secure/user/add_user.jsp</result>
+            <result name="success" type="redirect-action">
+                <param name="actionName">viewuser</param>
+                <param name="namespace">/secure/user</param>
+                <param name="name">${name}</param>
+            </result>
+            <allowed-methods>update</allowed-methods>
+        </action>
+
+    </package>
+
+    <!-- ==================== Group Actions ==================== -->
+    <package name="group" extends="crowd-default" namespace="/secure/group" strict-method-invocation="true">
+
+        <action name="browsegroups" class="com.atlassian.crowd.security.demo.action.group.BrowseGroups">
+            <result name="success">/secure/group/browse_groups.jsp</result>
+        </action>
+
+        <action name="addgroup" class="com.atlassian.crowd.security.demo.action.group.AddGroup" method="default">
+            <result name="input">/secure/group/add_group.jsp</result>
+            <result name="success" type="redirect-action">
+                <param name="actionName">viewgroup</param>
+                <param name="namespace">/secure/group</param>
+                <param name="name">${name}</param>
+            </result>
+            <allowed-methods>update</allowed-methods>
+        </action>
+
+        <action name="removegroup" class="com.atlassian.crowd.security.demo.action.group.RemoveGroup" method="default">
+            <result name="input">/secure/group/remove_group.jsp</result>
+            <result name="success" type="redirect-action">
+                <param name="actionName">browsegroups</param>
+                <param name="namespace">/secure/group</param>
+            </result>
+            <allowed-methods>update</allowed-methods>
+        </action>
+
+        <action name="viewgroup" class="com.atlassian.crowd.security.demo.action.group.ViewGroup" method="default">
+            <result name="success">/secure/group/view_group.jsp</result>
+        </action>
+
+        <action name="updategroup" class="com.atlassian.crowd.security.demo.action.group.UpdateGroup">
+            <result name="error">/secure/group/view_group.jsp</result>
+            <result name="success">/secure/group/view_group.jsp</result>
+            <allowed-methods>update</allowed-methods>
+        </action>
+
+    </package>
+
+</struts>

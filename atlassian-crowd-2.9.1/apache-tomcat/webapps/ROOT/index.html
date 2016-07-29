@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atlassian Crowd - Identity management for web apps</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="crowd/console/setup/aui/aui/css/aui.css">
+    <script src="crowd/console/setup/aui/aui/js/aui-all.js"></script>
+    <style>
+        .aui-header .aui-header-logo-atlassian .aui-header-logo-device {
+            background-image: url("images/atlassian_logo_text_white_x2.png");
+            width: 112px;
+        }
+    </style>
+</head>
+
+<body class="aui-page-fixed" id="aui-flatpack">
+<div id="page">
+    <header id="header">
+        <nav class="aui-header aui-dropdown2-trigger-group">
+            <div class="aui-header-inner aui-header-primary">
+                <h1 class="aui-header-logo aui-header-logo-atlassian" id="logo"><span class="aui-header-logo-device">Atlassian</span></h1>
+            </div>
+        </nav>
+    </header>
+
+    <section id="content">
+        <header class="aui-page-header">
+            <div class="aui-page-header-inner">
+                <div class="aui-page-header-main">
+                    <h1>Atlassian Crowd</h1>
+                </div>
+            </div>
+        </header>
+
+        <div class="aui-page-panel">
+            <div class="aui-page-panel-inner">
+                <section class="aui-page-panel-content">
+
+                    <h2>Crowd &#8212; Identity management for web apps</h2>
+
+                    <p>Crowd is an application security framework that handles authentication and authorisation calls for your web applications. With Crowd you can quickly integrate web applications into a single security architecture that supports single sign-on and centralised identity management.</p>
+
+                    <p>The application is divided into two parts:</p>
+                    <ul>
+                        <li>The administration console is a clean and powerful web interface to manage directories, users and their security rights.</li>
+                        <li>The integration API provides a platform neutral way to integrate web applications into a single security architecture.
+                            With the integration API applications can quickly access user information or perform security checks.</li>
+                    </ul>
+                    <p>The first time you access the Crowd console, you will be walked through the initial configuration of your deployment.</p>
+                    <p>
+                        <a class="aui-button aui-button-primary" href="crowd/console/">Set up Crowd</a>
+                    </p>
+
+                    <h2>Crowd OpenID server</h2>
+                    <p>The Crowd OpenID server implements the <a href="http://www.openid.net/">OpenID</a> specification. When using your Crowd OpenID login, you can have the same username and password for the public websites you use that support OpenID.</p>
+                    <p>
+                        <a class="aui-button" href="openidserver/">View OpenID server</a>
+                    </p>
+
+
+                    <h2>Demo Application</h2>
+                    <p>The Demo Application highlights best practices when using the Crowd framework. The Crowd download archive contains the entire source to the demo application, which can be used as an example when integrating your web applications.</p>
+                    <p>
+                        <a class="aui-button" href="demo/">View Demo Application</a>
+                    </p>
+
+                    <h2>OpenID client example</h2>
+                    <p>The OpenID client application can be used with the Crowd OpenID server as an example of how to use OpenID. The Crowd download archive contains the entire source to the OpenID demo application, which can be used as an example when integrating your web applications.</p>
+                    <p>
+                        <a class="aui-button" href="openidclient/">View OpenID client</a>
+                    </p>
+
+                </section>
+
+                <aside class="aui-page-panel-sidebar">
+                    <h2>Getting Started</h2>
+                        <p><a href="https://confluence.atlassian.com/display/CROWD/Crowd+Documentation" rel="nofollow">Documentation</a></p>
+                        <p><a href="https://confluence.atlassian.com/display/CROWD/Crowd+FAQ" rel="nofollow">FAQ</a></p>
+                        <p><a href="https://www.atlassian.com/resources/support" rel="nofollow">Support</a></p>
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+</div>
+
+<footer id="footer">
+    <section class="footer-body">
+        <ul id="aui-footer-list">
+            <li>Atlassian Crowd</li>
+            <li>Copyright &copy; 2005-2014 Atlassian Pty Ltd.</li>
+        </ul>
+    </section>
+</footer>
+
+</body>
+</html>

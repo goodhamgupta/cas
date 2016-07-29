@@ -1,0 +1,30 @@
+<decorators>
+    <decorator name="error" page="/console/decorator/simple.jsp">
+        <pattern>/console/error/*</pattern>
+    </decorator>
+    <decorator name="license" page="/console/decorator/simple.jsp">
+        <pattern>/console/license*</pattern>
+    </decorator>
+    <decorator name="setup" page="/console/decorator/setup.jsp">
+        <pattern>/console/setup/*</pattern>
+    </decorator>
+    <decorator name="none" page="/console/decorator/none.jsp">
+        <pattern>/console/plugin/secure/saml/*</pattern>
+        <pattern>/console/secure/pickers/*</pattern>
+    </decorator>
+    <decorator name="about" page="/console/decorator/setup.jsp">
+        <pattern>/about.jsp</pattern>
+    </decorator>
+
+    <decorator name="main" page="/console/decorator/default.jsp">
+        <pattern>*.jsp</pattern>
+        <pattern>*.action</pattern>
+        <pattern>*.html</pattern>
+    </decorator>
+
+    <!-- cross-product decorators provided for plugins (to be invoked with meta tags) -->
+    <decorator name="atl.general" page="/console/decorator/default.jsp"/>
+    <decorator name="atl.admin" page="/console/decorator/default.jsp"/>
+    <decorator name="atl.userprofile" page="/console/decorator/default.jsp"/>
+    <decorator name="atl.popup" page="/console/decorator/popup.jsp"/>
+</decorators>

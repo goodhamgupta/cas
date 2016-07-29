@@ -1,0 +1,254 @@
+Jun 22, 2016 1:02:21 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Jun 22, 2016 1:02:21 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:02:21 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 973 ms
+Jun 22, 2016 1:02:21 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 22, 2016 1:02:21 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.69
+Jun 22, 2016 1:02:21 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml
+Jun 22, 2016 1:02:24 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:02:27 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml has finished in 5,456 ms
+Jun 22, 2016 1:02:27 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml
+Jun 22, 2016 1:02:29 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:02:32 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml has finished in 4,717 ms
+Jun 22, 2016 1:02:32 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml
+Jun 22, 2016 1:02:39 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:02:41 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml has finished in 9,835 ms
+Jun 22, 2016 1:02:41 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml
+Jun 22, 2016 1:02:44 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:02:49 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml has finished in 7,202 ms
+Jun 22, 2016 1:02:49 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT
+Jun 22, 2016 1:02:49 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:02:49 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT has finished in 222 ms
+Jun 22, 2016 1:02:49 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:02:49 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 27487 ms
+Jun 22, 2016 1:07:07 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Jun 22, 2016 1:07:07 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:07:07 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jun 22, 2016 1:07:07 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 1:07:07 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/openidserver] appears to have started a thread named [HSQLDB Timer @34b93ac2] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 1:07:07 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/openidserver] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@10778ea2]) and a value of type [scala.concurrent.forkjoin.ForkJoinPool.Submitter] (value [scala.concurrent.forkjoin.ForkJoinPool$Submitter@272a4ec1]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 1:07:07 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:07:07 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:08:23 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Jun 22, 2016 1:08:23 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:08:23 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 576 ms
+Jun 22, 2016 1:08:23 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 22, 2016 1:08:23 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.69
+Jun 22, 2016 1:08:23 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml
+Jun 22, 2016 1:08:25 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:08:28 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml has finished in 4,861 ms
+Jun 22, 2016 1:08:28 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml
+Jun 22, 2016 1:08:30 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:08:31 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml has finished in 3,095 ms
+Jun 22, 2016 1:08:31 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml
+Jun 22, 2016 1:08:38 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:08:40 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml has finished in 8,477 ms
+Jun 22, 2016 1:08:40 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml
+Jun 22, 2016 1:08:42 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:08:46 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml has finished in 6,726 ms
+Jun 22, 2016 1:08:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT
+Jun 22, 2016 1:08:47 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:08:47 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT has finished in 205 ms
+Jun 22, 2016 1:08:47 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:08:47 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 23409 ms
+Jun 22, 2016 1:15:38 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Jun 22, 2016 1:15:38 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:15:38 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jun 22, 2016 1:15:38 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 1:15:38 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/openidserver] appears to have started a thread named [HSQLDB Timer @27f22548] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 1:15:38 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/openidserver] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@83c5499]) and a value of type [scala.concurrent.forkjoin.ForkJoinPool.Submitter] (value [scala.concurrent.forkjoin.ForkJoinPool$Submitter@7d2ccc86]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 1:15:38 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:15:38 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:15:51 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Jun 22, 2016 1:15:51 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:15:51 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 584 ms
+Jun 22, 2016 1:15:51 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jun 22, 2016 1:15:51 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.69
+Jun 22, 2016 1:15:51 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml
+Jun 22, 2016 1:15:53 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:15:56 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidclient.xml has finished in 4,654 ms
+Jun 22, 2016 1:15:56 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml
+Jun 22, 2016 1:15:58 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:15:59 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/demo.xml has finished in 3,786 ms
+Jun 22, 2016 1:15:59 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml
+Jun 22, 2016 1:16:06 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:16:08 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/crowd.xml has finished in 8,877 ms
+Jun 22, 2016 1:16:08 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml
+Jun 22, 2016 1:16:11 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:16:15 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/conf/Catalina/localhost/openidserver.xml has finished in 6,576 ms
+Jun 22, 2016 1:16:15 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT
+Jun 22, 2016 1:16:15 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:16:15 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/lp-153/Downloads/atlassian-crowd-2.9.1/apache-tomcat/webapps/ROOT has finished in 293 ms
+Jun 22, 2016 1:16:15 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 1:16:15 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 24230 ms
+Jun 22, 2016 1:17:09 PM org.apache.jasper.compiler.TldLocationsCache tldScanJar
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jun 22, 2016 1:30:07 PM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.8-atlassian-16 03/23/2015 10:20 PM'
+Jun 22, 2016 1:30:07 PM com.sun.jersey.api.wadl.config.WadlGeneratorLoader loadWadlGenerator
+INFO: Loading wadlGenerator com.sun.jersey.server.wadl.generators.WadlGeneratorApplicationDoc
+Jun 22, 2016 1:30:07 PM com.sun.jersey.api.wadl.config.WadlGeneratorLoader loadWadlGenerator
+INFO: Loading wadlGenerator com.sun.jersey.server.wadl.generators.WadlGeneratorGrammarsSupport
+Jun 22, 2016 1:30:07 PM com.sun.jersey.api.wadl.config.WadlGeneratorLoader loadWadlGenerator
+INFO: Loading wadlGenerator com.atlassian.plugins.rest.doclet.generators.resourcedoc.AtlassianWadlGeneratorResourceDocSupport
+Jun 22, 2016 11:27:34 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 11:27:34 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [scheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [scheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [scheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [scheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [scheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [scheduler_Worker-6] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [scheduler_Worker-7] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [scheduler_Worker-8] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [scheduler_Worker-9] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [scheduler_Worker-10] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/crowd] appears to have started a thread named [MultiThreadedHttpConnectionManager cleanup] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/crowd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ea4018b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/openidserver] appears to have started a thread named [HSQLDB Timer @34b93ac2] but has failed to stop it. This is very likely to create a memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/openidserver] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@13e26489]) and a value of type [scala.concurrent.forkjoin.ForkJoinPool.Submitter] (value [scala.concurrent.forkjoin.ForkJoinPool$Submitter@764963a2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jun 22, 2016 11:27:34 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8095"]
+Jun 22, 2016 11:27:34 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8095"]

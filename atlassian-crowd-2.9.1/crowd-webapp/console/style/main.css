@@ -1,0 +1,48 @@
+/* Remove these after replacing all their usages
+.error {
+    font-weight: bold;
+    color: #c00;
+}
+.success {
+    font-weight: bold;
+    color: green;
+}
+*/
+
+/* --- Search Results --- */
+table.search-results ul {
+    list-style: none;
+    padding-left: 0;
+}
+table.search-results li strong {
+    background: #ebf2f9;
+    color: #000;
+    font-weight: bold;
+}
+
+.application-icon {
+    vertical-align: text-bottom;
+}
+h2 > .application-icon {
+    padding-bottom: 3px;
+}
+.selected-groups {
+    padding-top: 5px;
+}
+#applicationsTable td {
+    vertical-align: middle;
+}
+
+pre.default-font {
+    font-family: inherit;
+}
+
+/* Profile page */
+.account-settings {
+    max-width: 800px;
+}
+
+.avatar-panel {
+    border-left: 1px solid #CCC;
+    width: 148px;
+}

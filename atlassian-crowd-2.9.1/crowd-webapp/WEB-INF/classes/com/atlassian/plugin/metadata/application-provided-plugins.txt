@@ -1,0 +1,6 @@
+crowd-saml-plugin
+crowd-rest-plugin
+crowd-rest-application-management
+crowd-sync-feedback
+com.atlassian.sal.crowd
+com.atlassian.healthcheck.atlassian-healthcheck

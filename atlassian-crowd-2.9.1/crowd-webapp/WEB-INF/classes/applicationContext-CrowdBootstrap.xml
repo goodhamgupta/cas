@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:plugin="http://atlassian.com/schema/spring/plugin"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+       http://atlassian.com/schema/spring/plugin http://atlassian.com/schema/spring/plugin.xsd">
+
+    <!-- bootstrap -->
+
+    <bean id="homeLocator" class="com.atlassian.config.DefaultHomeLocator" plugin:available="true">
+        <property name="configFileName" value="crowd.cfg.xml"/>
+        <property name="initPropertyName" value="crowd.home"/>
+        <property name="propertiesFile" value="crowd-init.properties"/>
+    </bean>
+
+    <bean id="applicationConfig" class="com.atlassian.config.ApplicationConfig">
+        <property name="configurationPersister">
+            <bean class="com.atlassian.config.xml.DefaultDom4jXmlConfigurationPersister"/>
+        </property>
+    </bean>
+
+    <bean id="setupPersister" class="com.atlassian.crowd.console.setup.CrowdSetupPersister">
+        <property name="applicationConfig">
+            <ref local="applicationConfig"/>
+        </property>
+    </bean>
+
+    <bean id="bootstrapManager" class="com.atlassian.crowd.manager.bootstrap.CrowdBootstrapManagerImpl">
+        <property name="homeLocator">
+            <ref local="homeLocator"/>
+        </property>
+        <property name="setupPersister">
+            <ref local="setupPersister"/>
+        </property>
+        <property name="applicationConfig">
+            <ref local="applicationConfig"/>
+        </property>
+        <property name="hibernateConfig">
+            <ref local="hibernateConfig"/>
+        </property>
+        <property name="hibernateConfigurator">
+            <ref local="hibernateConfigurator"/>
+        </property>
+        <property name="mappingResources">
+            <ref local="mappingResources"/>
+        </property>
+    </bean>
+
+
+    <!-- database -->
+
+    <bean id="hibernateConfig" class="com.atlassian.config.db.HibernateConfig">
+        <property name="applicationConfig">
+            <ref local="applicationConfig"/>
+        </property>
+    </bean>
+
+    <bean id="hibernateConfigurator" class="com.atlassian.crowd.console.setup.DefaultHibernateConfigurator"/>
+
+    <bean id="schemaHelper" class="com.atlassian.crowd.util.persistence.hibernate.SchemaHelper">
+        <property name="mappingResources" ref="mappingResources"/>
+        <property name="hibernateConfig" ref="hibernateConfig"/>
+    </bean>
+
+    <bean id="mappingResources" class="com.atlassian.crowd.util.persistence.hibernate.MappingResources">
+        <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+    </bean>
+
+    <!-- license -->
+    <bean id='licenseManager' class='com.atlassian.extras.core.DefaultLicenseManager'>
+        <constructor-arg index="0">
+            <bean class='com.atlassian.extras.decoder.api.DelegatingLicenseDecoder'>
+                <constructor-arg>
+                    <list value-type='com.atlassian.extras.decoder.api.LicenseDecoder'>
+                        <bean class="com.atlassian.extras.decoder.v2.Version2LicenseDecoder"/>
+                        <bean class="com.atlassian.extras.decoder.v1.Version1LicenseDecoder"/>
+                    </list>
+                </constructor-arg>
+            </bean>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <bean class="com.atlassian.extras.core.DefaultAtlassianLicenseFactory">
+                <constructor-arg>
+                    <map key-type="com.atlassian.extras.api.Product"
+                         value-type="com.atlassian.extras.core.ProductLicenseFactory">
+                        <entry key="#{T(com.atlassian.extras.api.Product).CROWD}">
+                            <bean class="com.atlassian.extras.core.crowd.CrowdProductLicenseFactory"/>
+                        </entry>
+                    </map>
+                </constructor-arg>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <bean id="licenseStore" class="com.atlassian.crowd.manager.license.CrowdLicenseStore">
+        <constructor-arg index="0" ref='licenseManager'/>
+    </bean>
+
+    <bean id="sidManager" class="com.atlassian.license.DefaultSIDManager"/>
+
+    <!-- Minimal Atlassian Plugin Deps for Filters and Servlets -->
+
+    <!-- Servlet Descriptor dependecies -->
+
+    <bean id="pluginEventManager" class="com.atlassian.plugin.event.impl.DefaultPluginEventManager" plugin:available="true"/>
+
+    <bean id="servletModuleManager" class="com.atlassian.plugin.servlet.DefaultServletModuleManager" plugin:available="true">
+        <constructor-arg index="0" ref="pluginEventManager"/>
+    </bean>
+
+    <bean id="crowdLoggingConfigurationListener" class="com.atlassian.crowd.console.logging.CrowdLoggingConfigurationListener">
+        <property name="logFileName" value="atlassian-crowd.log"/>
+        <property name="appenderName" value="crowdlog"/>
+    </bean>
+
+    <bean id="pluginMetadata" class="com.atlassian.plugin.metadata.ClasspathFilePluginMetadata"/>
+
+    <bean id="pluginMetadataManager" class="com.atlassian.plugin.metadata.DefaultPluginMetadataManager" plugin:available="true">
+        <constructor-arg ref='pluginMetadata'/>
+    </bean>
+
+</beans>

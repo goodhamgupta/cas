@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:plugin="http://atlassian.com/schema/spring/plugin"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://atlassian.com/schema/spring/plugin http://atlassian.com/schema/spring/plugin.xsd">
+
+    <bean id="resourceLocator" class="com.atlassian.crowd.util.ConsoleResourceLocator">
+        <constructor-arg index="0" value="crowd.properties"/>
+        <constructor-arg index="1" ref="homeLocator"/>
+    </bean>
+
+    <bean id="propertyUtils" class="com.atlassian.crowd.util.PropertyUtils"/>
+
+    <bean id="clientProperties" class="com.atlassian.crowd.service.soap.client.SoapClientPropertiesImpl" factory-method="newInstanceFromResourceLocator" plugin:available="true">
+        <constructor-arg ref="resourceLocator"/>
+    </bean>
+
+    <bean id="securityServerClient" class="com.atlassian.crowd.service.soap.client.SecurityServerClientImpl" plugin:available="true">
+        <constructor-arg ref="clientProperties"/>
+    </bean>
+
+    <bean id="httpAuthenticator" class="com.atlassian.crowd.integration.http.HttpAuthenticatorImpl" plugin:available="true">
+        <constructor-arg ref="crowdAuthenticationManager"/>
+    </bean>
+
+    <bean id="crowdAuthenticationManager" class="com.atlassian.crowd.service.cache.CacheAwareAuthenticationManager">
+        <constructor-arg index="0" ref="securityServerClient"/>
+        <constructor-arg index="1" ref="crowdUserManager" />
+    </bean>
+
+    <bean id="crowdClientFactory" class="com.atlassian.crowd.integration.rest.service.factory.RestCrowdClientFactory">
+        <constructor-arg ref="authorizationHeaderGenerator"/>
+    </bean>
+
+    <bean id="authorizationHeaderGenerator" class="com.atlassian.asap.core.client.http.AuthorizationHeaderGeneratorImpl" factory-method="createDefault">
+        <constructor-arg>
+            <bean class="java.net.URI" factory-method="create">
+                <constructor-arg value="${asap.private.key.provider:null:/}"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <bean id="ehcacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:/crowd-ehcache.xml"/>
+    </bean>
+
+    <bean id="clientCache" class="com.atlassian.crowd.service.cache.CacheImpl">
+        <constructor-arg type="net.sf.ehcache.CacheManager" ref="ehcacheManager"/>
+    </bean>
+
+    <bean id="crowdUserManager" class="com.atlassian.crowd.service.cache.CachingUserManager">
+        <constructor-arg index="0" ref="securityServerClient"/>
+        <constructor-arg index="1" ref="clientCache"/>
+    </bean>
+
+    <bean id="crowdGroupMembershipManager" class="com.atlassian.crowd.service.cache.CachingGroupMembershipManager">
+        <constructor-arg index="0" ref="securityServerClient"/>
+        <constructor-arg index="1" ref="crowdUserManager"/>
+        <constructor-arg index="2" ref="crowdGroupManager"/>
+        <constructor-arg index="3" ref="clientCache"/>
+    </bean>
+
+    <bean id="crowdGroupManager" class="com.atlassian.crowd.service.cache.CachingGroupManager">
+        <constructor-arg index="0" ref="securityServerClient"/>
+        <constructor-arg index="1" ref="clientCache"/>
+    </bean>
+    
+</beans>
+

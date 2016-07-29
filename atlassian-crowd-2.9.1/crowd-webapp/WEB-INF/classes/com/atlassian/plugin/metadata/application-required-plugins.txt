@@ -1,0 +1,6 @@
+crowd.system.passwordencoders
+crowd-rest-plugin
+com.atlassian.auiplugin
+com.atlassian.soy.soy-template-plugin
+crowd-trusted-apps
+com.atlassian.plugins.atlassian-plugins-webresource-plugin

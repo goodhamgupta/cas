@@ -1,0 +1,75 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="/struts-tags" prefix="ww" %>
+<html>
+<head>
+    <title><ww:text name="dataimport.csv.title"/></title>
+    <meta name="section" content="dataimport"/>
+    <meta name="help.url" content="<ww:property value="getText('help.user.import.csv.results')"/>"/>    
+</head>
+<body>
+
+<ww:set name="progressTracker">
+    <ww:component template="progress-tracker.jsp">
+        <ww:param name="steps" value="getProgressSteps(4)" />
+    </ww:component>
+</ww:set>
+<ww:component template="header.jsp">
+    <ww:param name="mainContent">
+        <h2><ww:property value="getText('dataimport.csv.title')"/></h2>
+    </ww:param>
+    <ww:param name="actionsContent" value="#progressTracker" />
+</ww:component>
+
+<h3><ww:text name="dataimport.csv.result.text"/></h3>
+
+<ww:component template="form_messages.jsp"/>
+
+<p id="users-imported"><ww:text name="dataimport.importusercount.label"/>:&nbsp;<ww:property value="result.usersImported"/></p>
+
+<ww:if test="result.usersAlreadyExist != null && result.usersAlreadyExist.size > 0">
+    <p id="users-already-exist">
+        <ww:text name="dataimport.importusersalreadyexist.label"/>:&nbsp;
+        <ww:iterator value="result.usersAlreadyExist" status="rowstatus">
+            <ww:property/><ww:if test="!#rowstatus.last">,</ww:if>
+        </ww:iterator>
+    </p>
+</ww:if>
+
+<ww:if test="result.usersFailedImport != null && result.usersFailedImport.size > 0">
+    <p id="users-failed-import"><ww:text name="dataimport.importusersfailed.label"/>:&nbsp;
+        <ww:iterator value="result.usersFailedImport" status="rowstatus">
+            <ww:property/><ww:if test="!#rowstatus.last">,</ww:if>
+        </ww:iterator>
+    </p>
+</ww:if>
+
+<p id="groups-imported"><ww:text name="dataimport.importgroupcount.label"/>:&nbsp;<ww:property value="result.groupsImported"/></p>
+
+<ww:if test="result.groupsAlreadyExist != null && result.groupsAlreadyExist.size > 0">
+    <p id="groups-already-exist"><ww:text name="dataimport.importgroupsalreadyexist.label"/>:&nbsp;
+        <ww:iterator value="result.groupsAlreadyExist" status="rowstatus">
+            <ww:property/><ww:if test="!#rowstatus.last">,</ww:if>
+        </ww:iterator>
+    </p>
+</ww:if>
+
+<ww:if test="result.groupsFailedImport != null && result.groupsFailedImport.size > 0">
+    <p id="groups-failed-import"><ww:text name="dataimport.importgroupsfailed.label"/>:&nbsp;
+        <ww:iterator value="result.groupsFailedImport" status="rowstatus">
+            <ww:property/><ww:if test="!#rowstatus.last">,</ww:if>
+        </ww:iterator>
+    </p>
+</ww:if>
+
+<p id="memberships-imported"><ww:text name="dataimport.importgroupmemberships.label"/>:&nbsp;<ww:property value="result.groupMembershipsImported"/></p>
+
+<ww:if test="result.membershipsFailedImport != null && result.membershipsFailedImport.size > 0">
+    <p id="memberships-failed-import"><ww:text name="dataimport.importgroupmembershipfailed.label"/>:&nbsp;
+        <ww:iterator value="result.membershipsFailedImport" status="rowstatus">
+            <ww:property/><ww:if test="!#rowstatus.last">,</ww:if>
+        </ww:iterator>
+    </p>
+</ww:if>
+
+</body>
+</html>

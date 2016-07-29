@@ -1,0 +1,98 @@
+2016-06-21 15:33:02,125 localhost-startStop-1 INFO [ContainerBase.[Catalina].[localhost].[/crowd]] No Spring WebApplicationInitializer types detected on classpath
+2016-06-21 15:33:03,437 localhost-startStop-1 WARN [atlassian.config.bootstrap.DefaultAtlassianBootstrapManager] Unable to set up application config: no home set
+2016-06-21 15:33:03,847 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.factory.ResultFactory)
+2016-06-21 15:33:03,847 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.factory.ConverterFactory)
+2016-06-21 15:33:03,847 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.factory.InterceptorFactory)
+2016-06-21 15:33:03,847 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.factory.ValidatorFactory)
+2016-06-21 15:33:03,847 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.factory.UnknownHandlerFactory)
+2016-06-21 15:33:03,847 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.FileManagerFactory)
+2016-06-21 15:33:03,847 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+2016-06-21 15:33:03,847 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.CollectionConverter)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.ArrayConverter)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.DateConverter)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.NumberConverter)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.StringConverter)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionPropertiesProcessor)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionFileProcessor)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionAnnotationProcessor)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterCreator)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterHolder)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.LocaleProvider)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+2016-06-21 15:33:03,848 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+2016-06-21 15:33:03,849 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+2016-06-21 15:33:03,850 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+2016-06-21 15:33:03,850 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+2016-06-21 15:33:03,850 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+2016-06-21 15:33:03,850 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+2016-06-21 15:33:03,850 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+2016-06-21 15:33:03,850 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+2016-06-21 15:33:03,850 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+2016-06-21 15:33:03,850 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+2016-06-21 15:33:03,850 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+2016-06-21 15:33:03,850 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.util.TextParser)
+2016-06-21 15:33:03,851 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (org.apache.struts2.dispatcher.DispatcherErrorHandler)
+2016-06-21 15:33:03,851 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.security.ExcludedPatternsChecker)
+2016-06-21 15:33:03,851 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.security.AcceptedPatternsChecker)
+2016-06-21 15:33:03,853 localhost-startStop-1 INFO [apache.struts2.config.DefaultBeanSelectionProvider] Loading global messages from [help-paths]
+2016-06-21 15:33:04,384 localhost-startStop-1 INFO [com.atlassian.crowd.startup] System Information:
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Timezone: India Standard Time
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Java Version: 1.8.0_91
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Java Vendor: Oracle Corporation
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	JVM Version: 25.91-b14
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	JVM Vendor: Oracle Corporation
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	JVM Runtime: Java HotSpot(TM) 64-Bit Server VM
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Username: lp-153
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Operating System: Linux3.13.0-88-generic
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Architecture: amd64
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	File Encoding: UTF-8
+2016-06-21 15:33:04,385 localhost-startStop-1 INFO [com.atlassian.crowd.startup] JVM Statistics:
+2016-06-21 15:33:04,386 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Total Memory: 255MB
+2016-06-21 15:33:04,386 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Used Memory: 85MB
+2016-06-21 15:33:04,386 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Free Memory: 170MB
+2016-06-21 15:33:04,386 localhost-startStop-1 INFO [com.atlassian.crowd.startup] Runtime Information:
+2016-06-21 15:33:04,386 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Version: 2.9.1
+2016-06-21 15:33:04,386 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Build Number: 665
+2016-06-21 15:33:04,386 localhost-startStop-1 INFO [com.atlassian.crowd.startup] 	Build Date: 2016-05-09
+2016-06-21 15:33:04,386 localhost-startStop-1 INFO [crowd.console.listener.StartupListener] Upgrades not performed since the application has not been setup yet.
+2016-06-21 15:33:04,443 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.factory.ResultFactory)
+2016-06-21 15:33:04,443 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.factory.ConverterFactory)
+2016-06-21 15:33:04,443 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.factory.InterceptorFactory)
+2016-06-21 15:33:04,443 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.factory.ValidatorFactory)
+2016-06-21 15:33:04,443 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.factory.UnknownHandlerFactory)
+2016-06-21 15:33:04,443 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.FileManagerFactory)
+2016-06-21 15:33:04,443 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+2016-06-21 15:33:04,443 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.CollectionConverter)
+2016-06-21 15:33:04,443 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.ArrayConverter)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.DateConverter)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.NumberConverter)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.StringConverter)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionPropertiesProcessor)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionFileProcessor)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionAnnotationProcessor)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterCreator)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterHolder)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.LocaleProvider)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+2016-06-21 15:33:04,444 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+2016-06-21 15:33:04,445 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+2016-06-21 15:33:04,445 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.util.TextParser)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (org.apache.struts2.dispatcher.DispatcherErrorHandler)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.security.ExcludedPatternsChecker)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.AbstractBeanSelectionProvider] Choosing bean (struts) for (com.opensymphony.xwork2.security.AcceptedPatternsChecker)
+2016-06-21 15:33:04,446 localhost-startStop-1 INFO [apache.struts2.config.DefaultBeanSelectionProvider] Loading global messages from [help-paths]
+2016-06-21 15:33:04,530 localhost-startStop-1 INFO [ContainerBase.[Catalina].[localhost].[/crowd]] org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: loaded (conf ok)
+2016-06-21 15:37:49,323 http-bio-8095-exec-9 INFO [atlassian.johnson.filters.JohnsonFilter] The application is not yet setup. Redirecting request from '/console/index.jsp' to '/console/setup/selectsetupstep.action'
+2016-06-21 15:38:50,492 localhost-startStop-2 INFO [ContainerBase.[Catalina].[localhost].[/crowd]] org.tuckey.web.filters.urlrewrite.UrlRewriteFilter INFO: destroy called
+2016-06-21 15:38:50,494 localhost-startStop-2 INFO [com.atlassian.crowd.startup] Stopping Crowd

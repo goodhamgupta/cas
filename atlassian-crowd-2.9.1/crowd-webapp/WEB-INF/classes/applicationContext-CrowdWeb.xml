@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:plugin="http://atlassian.com/schema/spring/plugin"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://atlassian.com/schema/spring/plugin http://atlassian.com/schema/spring/plugin.xsd">
+
+    <!-- license check filter -->
+    <bean id="licenceFilter" class="com.atlassian.crowd.console.filter.LicenceFilter">
+        <property name="crowdLicenseManager" ref="crowdLicenseManager"/>
+    </bean>
+
+    <!-- Specialised anti-csrf filter for login page -->
+    <bean id="preventLoginCsrfFilter" class="com.atlassian.crowd.console.filter.LoginCsrfFilter">
+        <property name="tokenGenerator" ref="xsrfTokenGenerator"/>
+    </bean>
+
+    <!-- Webwork Actions -->
+    <bean id="userSearcher" class="com.atlassian.crowd.console.action.UserSearcherImpl">
+        <constructor-arg index="0" ref="directoryManager"/>
+        <constructor-arg index="1" ref="applicationServiceInternal"/>
+        <constructor-arg index="2" ref="applicationManager"/>
+    </bean>    
+
+    <bean id="johnsonEventContainer" class="com.atlassian.crowd.util.JohnsonEventContainerFactoryBean" lazy-init="true" plugin:available="true"/>
+
+    <bean id="adminGroupChecker" class="com.atlassian.crowd.util.AdminGroupChecker">
+        <constructor-arg index="0" ref="directoryManager" />
+        <constructor-arg index="1" ref="applicationManager" />
+        <constructor-arg index="2" ref="i18nHelper" />
+    </bean>
+
+    <bean id="ldapConfigurationTester" class="com.atlassian.crowd.console.action.directory.LDAPConfigurationTesterImpl">
+        <constructor-arg index="0" ref="directoryInstanceLoader" />
+    </bean>
+
+</beans>

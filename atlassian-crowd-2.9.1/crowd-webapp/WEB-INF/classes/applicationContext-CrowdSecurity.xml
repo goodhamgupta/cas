@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:plugin="http://atlassian.com/schema/spring/plugin"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://atlassian.com/schema/spring/plugin http://atlassian.com/schema/spring/plugin.xsd
+       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <!-- Resources ignored by the Spring Security filters -->
+    <security:http pattern="/services/**" security='none'/>
+    <security:http pattern="console/decorator/**" security='none'/>
+    <security:http pattern="/console/images/**" security='none'/>
+    <security:http pattern="/console/style/**" security='none'/>
+    <security:http pattern="/template/**" security='none'/>
+
+    <!-- These REST modules handle their own security -->
+    <security:http pattern="/rest/appmanagement/**" security="none"/>
+    <security:http pattern="/rest/usermanagement/**" security="none"/>
+    <security:http pattern="/rest/custom-auth-*/**" security="none"/> <!-- plugins can add new rest endpoints here if they want to manage authentication themselves -->
+    <security:http pattern="/rest/studiousermanagement/**" security="none"/>
+    <security:http pattern="/rest/obm/**" security="none"/>
+    <security:http pattern="/rest/um/1/google-apps/**" security="none"/>
+
+    <!-- Go through the authenticationManager so that we can get the current logged in user,
+         but dont intercept based on authorities, as we want to handle that in our own resty way -->
+    <security:http pattern="/rest/**"
+                   authentication-manager-ref="authenticationManager">
+        <security:http-basic />
+    </security:http>
+
+    <security:http auto-config="false"
+          authentication-manager-ref="authenticationManager"
+          entry-point-ref="crowdAuthenticationProcessingFilterEntryPoint"
+          access-denied-page="/console/accessdenied.jsp" >
+        <security:custom-filter position="FORM_LOGIN_FILTER" ref='authenticationProcessingFilter'/>
+        <security:custom-filter position="LOGOUT_FILTER" ref='logoutFilter'/>
+
+        <security:intercept-url pattern="/console/secure/**" access="ROLE_SYS_ADMIN"/>
+        <security:intercept-url pattern="/console/user/**" access="IS_AUTHENTICATED_FULLY"/>
+        <security:intercept-url pattern="/console/plugin/secure/**" access="IS_AUTHENTICATED_FULLY"/>
+        <security:intercept-url pattern="/plugins/servlet/applinks/**" access="ROLE_SYS_ADMIN"/>
+        <security:intercept-url pattern="/plugins/servlet/um/users/resetpassword/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <security:intercept-url pattern="/plugins/servlet/um/users/sign-up/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <security:intercept-url pattern="/plugins/servlet/um/teams/**" access="IS_AUTHENTICATED_FULLY"/>
+        <security:intercept-url pattern="/plugins/servlet/um/**" access="ROLE_ADMIN"/>
+    </security:http>
+
+    <!-- session context -->
+    <bean id="httpSessionContextIntegrationFilter" class="org.springframework.security.web.context.SecurityContextPersistenceFilter"/>
+
+    <bean id="crowdAuthenticationProcessingFilterEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+		<property name="loginFormUrl" value="/console/login.action"/>
+	</bean>
+
+    <!-- logout -->
+    <bean id="logoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
+        <constructor-arg value="/console/login.action"/>
+        <constructor-arg>
+            <list>
+                <ref bean="crowdLogoutHandler"/>
+                <bean class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler"/>
+            </list>
+        </constructor-arg>
+        <property name="filterProcessesUrl" value="/console/logoff.action"/>
+    </bean>
+
+    <bean id="crowdLogoutHandler" class="com.atlassian.crowd.integration.soap.springsecurity.CrowdLogoutHandler">
+        <property name="httpAuthenticator" ref="httpAuthenticator"/>
+    </bean>
+
+    <!-- authentication -->
+
+    <bean id="authenticationProcessingFilter" class="com.atlassian.crowd.integration.soap.springsecurity.CrowdSSOAuthenticationProcessingFilter">
+        <property name="httpAuthenticator" ref="httpAuthenticator"/>
+        <property name="authenticationManager" ref="authenticationManager"/>
+        <property name="filterProcessesUrl" value="/console/j_security_check"/> <!-- if filterProcessesUrl is changed, also update the filter mapping for LoginCsrfFilter in web.xml -->
+        <property name="authenticationFailureHandler">
+            <bean class="com.atlassian.crowd.integration.soap.springsecurity.UsernameStoringAuthenticationFailureHandler">
+                <property name="defaultFailureUrl" value="/console/login.action?error=true"/>
+            </bean>
+        </property>
+
+        <property name="authenticationSuccessHandler">
+            <bean class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+                <property name="defaultTargetUrl" value="/console/defaultstartpage.action"/>
+            </bean>
+        </property>
+        <property name="requestToApplicationMapper" ref="requestToApplicationMapper"/>
+        <property name="loginUrlAuthenticationEntryPoint" ref="crowdAuthenticationProcessingFilterEntryPoint"/>
+    </bean>
+
+    <bean id="requestToApplicationMapper" class="com.atlassian.crowd.integration.soap.springsecurity.RequestToApplicationMapperImpl" plugin:available="true">
+        <constructor-arg ref="clientProperties"/>
+    </bean>
+
+    <bean id="authenticationManager" class="com.atlassian.crowd.integration.soap.springsecurity.DynamicProviderManagerImpl" plugin:available="true">
+        <property name="providers">
+            <list>
+                <ref local="crowdAuthenticationProvider"/>
+                <bean class='org.springframework.security.authentication.AnonymousAuthenticationProvider'>
+                    <property name="key" value="anonymous"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="crowdAuthenticationProvider" class="com.atlassian.crowd.integration.soap.springsecurity.RemoteCrowdAuthenticationProvider">
+        <constructor-arg ref="crowdAuthenticationManager"/>
+        <constructor-arg ref="httpAuthenticator"/>
+        <constructor-arg ref="crowdUserDetailsService"/>
+    </bean>
+
+    <bean id="crowdUserDetailsService" class="com.atlassian.crowd.integration.soap.springsecurity.user.CrowdUserDetailsServiceImpl" plugin:available="true">
+        <property name="groupMembershipManager" ref="crowdGroupMembershipManager"/>
+        <property name="userManager" ref="crowdUserManager"/>
+        <property name="userAuthoritiesProvider">
+            <bean class="com.atlassian.crowd.user.UserAuthoritiesProviderImpl">
+                <constructor-arg ref="userPermissionService"/>
+            </bean>
+        </property>
+        <property name="adminAuthority" value="ROLE_SYS_ADMIN"/>
+    </bean>
+
+    <bean id="xsrfTokenGenerator" class="com.atlassian.crowd.xwork.SimpleXsrfTokenGenerator" plugin:available="true" />
+</beans>

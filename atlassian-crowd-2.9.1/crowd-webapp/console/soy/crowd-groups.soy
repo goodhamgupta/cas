@@ -1,0 +1,143 @@
+{namespace crowd}
+
+/**
+ * @param permissionDataList A list of permission objects that the user can choose from {name: String, i18nName: String, permission: String}
+ * @param noResultsText Text to show when no permissions are returned from the server.
+ */
+{template .permissionTable private="true"}
+    <div id="aui-message-bar"></div>
+    {call aui.table}
+        {param extraClasses: 'permissions-table' /}
+        {param id: 'group-permissions-table' /}
+        {param theadContent}
+            <tr>
+                <th class="name-column">Name</th>
+                <th class="added-column"></th>
+                {foreach $permissionData in $permissionDataList}
+                <th class="permission-column" title="{$permissionData.i18nName}">{$permissionData.i18nName}</th>
+                {/foreach}
+                <th class="remove-permissions-column"></th>
+            </tr>
+            {call .multiSelector}
+                {param colspan: length($permissionDataList) + 3 /}/* the +3 is for the columns that are always there */
+                {param extraClasses: 'add-group' /}
+                {param placeholderText: getText('crowd.groups.selection.placeholder') /}
+            {/call}
+        {/param}
+        {param content}{/param}
+        {param tfootContent}
+            <tr class="no-results-row">
+                <td colspan="{length($permissionDataList) + 3}"> /* the +3 is for the columns that are always there */
+                    <div>{$noResultsText}</div>
+                </td>
+            </tr>
+            <tr class="load-more-row">
+                <td colspan="{length($permissionDataList) + 3}"> /* same as above - +3 for the columns that are always there */
+                    <a href="#" class="load-more">Load more</a>
+                </td>
+            </tr>
+        {/param}
+    {/call}
+{/template}
+
+/**
+* @param permissionDataList a list of PermissionData
+* @param? grantablePermissionDataList a list of permissions which can be granted
+* @param noResultsText
+*/
+{template .groupPermissionTable}
+    {call .permissionTable}
+        {param permissionDataList: $permissionDataList /}
+        {param grantablePermissionDataList: $grantablePermissionDataList /}
+        {param noResultsText: $noResultsText /}
+    {/call}
+{/template}
+
+/**
+ * @param entity a group object
+ * @param showAddedLozenge boolean Show the added lozenge?
+ * @param showRemovePermsButton Show delete button on the right side of rows.
+ * @param entityPermissions a list of permission data like { name : string, granted : boolean, inherited : boolean }
+ */
+{template .groupPermissionRow}
+    <tr data-entity-id="{$entity.id}">
+        <td>
+            {$entity.name}
+        </td>
+        <td>
+            {if $showAddedLozenge}
+                /* There is not currently labels in AUI Soy. */
+                <span class="aui-lozenge aui-lozenge-success">Added</span>
+            {/if}
+        </td>
+        {call .permissionCells}{param entityPermissions: $entityPermissions /}{/call}
+        <td>
+            {if $showRemovePermsButton}
+            {call aui.icons.icon}
+                {param icon: 'remove' /}
+                {param useIconFont: true /}
+                {param extraClasses: 'delete-button' /}
+            {/call}
+            {/if}
+        </td>
+    </tr>
+{/template}
+
+/**
+ * @param entityPermissions a list of permission data like { name : string, granted : boolean, inherited : boolean, privileged : boolean, tooltip : string }
+ */
+{template .permissionCells}
+    {foreach $permission in $entityPermissions}
+        <td>
+            <input type="checkbox" value="{$permission.name}" {if $permission.tooltip}title="{$permission.tooltip}"{/if}
+            {if $permission.inherited or $permission.granted or isLast($permission)}checked {/if}
+            {if $permission.privileged or $permission.inherited or isLast($permission)}disabled class="disabled"{/if}
+            />
+        </td>
+    {/foreach}
+{/template}
+
+/**
+ * @param entityId
+ * @param numRows
+ * @param message
+ */
+{template .errorPermissionRow}
+    <tr data-entity-id="{$entityId}" class="permission-error">
+        <td colspan="{$numRows}">
+            {$message}
+        </td>
+    </tr>
+{/template}
+
+/**
+ * @param colspan
+ * @param placeholderText Text to put in select2 placeholder.
+ * @param? extraClasses
+ */
+{template .multiSelector}
+<tr class="permission-multi-selector-container">
+    <th colspan="{$colspan}">
+        <form id="permission-table-form" class="aui" method="post">
+        {call aui.group.group}
+            {param extraClasses: 'aui-group-split'/}
+            {param content}
+                {call aui.group.item}
+                    {param content}
+                        <input type="text" class="permission-multi-selector{if $extraClasses}{sp}{$extraClasses}{/if}" placeholder="{$placeholderText}"/>
+                    {/param}
+                {/call}
+                {call aui.group.item}
+                    {param content}
+                        {call aui.buttons.button}
+                            {param extraClasses: 'add-button' /}
+                            {param text: 'Add' /}
+                        {/call}
+                    {/param}
+                {/call}
+            {/param}
+        {/call}
+        </form>
+    </th>
+</tr>
+{/template}
